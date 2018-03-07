@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5327E02C205070B1000582AD /* iphone.json in Resources */ = {isa = PBXBuildFile; fileRef = 5327E02B205070B0000582AD /* iphone.json */; };
 		535A08F72050462E005D7EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535A08F62050462E005D7EF1 /* AppDelegate.swift */; };
 		535A08F92050462E005D7EF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535A08F82050462E005D7EF1 /* ViewController.swift */; };
 		535A08FC2050462E005D7EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535A08FA2050462E005D7EF1 /* Main.storyboard */; };
 		535A08FE2050462E005D7EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 535A08FD2050462E005D7EF1 /* Assets.xcassets */; };
 		535A09012050462E005D7EF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535A08FF2050462E005D7EF1 /* LaunchScreen.storyboard */; };
+		535A090C2050480E005D7EF1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535A090B2050480E005D7EF1 /* TableViewCell.swift */; };
+		535A090F205049FD005D7EF1 /* ProductParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535A090E205049FD005D7EF1 /* ProductParse.swift */; };
+		535A091120504AF8005D7EF1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535A091020504AF8005D7EF1 /* Model.swift */; };
+		535A091520505753005D7EF1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535A091420505753005D7EF1 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5327E02B205070B0000582AD /* iphone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iphone.json; sourceTree = "<group>"; };
 		535A08F32050462E005D7EF1 /* uran_test_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uran_test_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		535A08F62050462E005D7EF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		535A08F82050462E005D7EF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,10 @@
 		535A08FD2050462E005D7EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		535A09002050462E005D7EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		535A09022050462E005D7EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		535A090B2050480E005D7EF1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		535A090E205049FD005D7EF1 /* ProductParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductParse.swift; sourceTree = "<group>"; };
+		535A091020504AF8005D7EF1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		535A091420505753005D7EF1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,51 @@
 		535A08F52050462E005D7EF1 /* uran_test_app */ = {
 			isa = PBXGroup;
 			children = (
+				535A090D205049E2005D7EF1 /* View */,
+				535A090A2050465A005D7EF1 /* Assets */,
+				535A090920504650005D7EF1 /* Model */,
+				535A090820504643005D7EF1 /* Controller */,
 				535A08F62050462E005D7EF1 /* AppDelegate.swift */,
-				535A08F82050462E005D7EF1 /* ViewController.swift */,
 				535A08FA2050462E005D7EF1 /* Main.storyboard */,
 				535A08FD2050462E005D7EF1 /* Assets.xcassets */,
 				535A08FF2050462E005D7EF1 /* LaunchScreen.storyboard */,
 				535A09022050462E005D7EF1 /* Info.plist */,
 			);
 			path = uran_test_app;
+			sourceTree = "<group>";
+		};
+		535A090820504643005D7EF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				535A090E205049FD005D7EF1 /* ProductParse.swift */,
+				535A08F82050462E005D7EF1 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		535A090920504650005D7EF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				535A091020504AF8005D7EF1 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		535A090A2050465A005D7EF1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5327E02B205070B0000582AD /* iphone.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		535A090D205049E2005D7EF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				535A090B2050480E005D7EF1 /* TableViewCell.swift */,
+				535A091420505753005D7EF1 /* CollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +172,7 @@
 			files = (
 				535A09012050462E005D7EF1 /* LaunchScreen.storyboard in Resources */,
 				535A08FE2050462E005D7EF1 /* Assets.xcassets in Resources */,
+				5327E02C205070B1000582AD /* iphone.json in Resources */,
 				535A08FC2050462E005D7EF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				535A091120504AF8005D7EF1 /* Model.swift in Sources */,
+				535A090C2050480E005D7EF1 /* TableViewCell.swift in Sources */,
+				535A091520505753005D7EF1 /* CollectionViewCell.swift in Sources */,
+				535A090F205049FD005D7EF1 /* ProductParse.swift in Sources */,
 				535A08F92050462E005D7EF1 /* ViewController.swift in Sources */,
 				535A08F72050462E005D7EF1 /* AppDelegate.swift in Sources */,
 			);

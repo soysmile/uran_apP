@@ -1,24 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1h6-4g-7uG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="Ia5-vu-cUY">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="1h6-4g-7uG" customClass="ViewController" customModule="uran_test_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o3D-1S-md2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wt7-ez-ODg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="productCell" rowHeight="200" id="Nm8-I3-nDU" customClass="TableViewCell" customModule="uran_test_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nm8-I3-nDU" id="78K-OP-S6S">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M5m-Ph-9Yf">
+                                                    <rect key="frame" x="15" y="11" width="345" height="178"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qjv-sP-geH">
+                                                        <size key="itemSize" width="345" height="177"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="productCell" id="V5j-iD-fTI" customClass="CollectionViewCell" customModule="uran_test_app" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.5" width="345" height="177"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="177"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IPhone_5S" translatesAutoresizingMaskIntoConstraints="NO" id="cyP-V8-Eqf">
+                                                                        <rect key="frame" x="8" y="8" width="329" height="161"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="cyP-V8-Eqf" firstAttribute="top" secondItem="V5j-iD-fTI" secondAttribute="topMargin" id="01L-qa-adQ"/>
+                                                                <constraint firstAttribute="trailingMargin" secondItem="cyP-V8-Eqf" secondAttribute="trailing" id="2yd-vC-I5R"/>
+                                                                <constraint firstItem="cyP-V8-Eqf" firstAttribute="leading" secondItem="V5j-iD-fTI" secondAttribute="leadingMargin" id="d0c-VG-Q8B"/>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="cyP-V8-Eqf" secondAttribute="bottom" id="hvH-Hf-uc7"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="productImage" destination="cyP-V8-Eqf" id="Udt-Ii-Iyc"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                                <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tl5-og-Thh">
+                                                    <rect key="frame" x="23" y="19" width="329" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 5S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAR-zf-Tec">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="37"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="0Ka-ez-EJP"/>
+                                                        <constraint firstItem="cAR-zf-Tec" firstAttribute="top" secondItem="tl5-og-Thh" secondAttribute="top" id="R4f-Z1-DSF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cAR-zf-Tec" secondAttribute="trailing" id="YPV-8f-hAs"/>
+                                                        <constraint firstItem="cAR-zf-Tec" firstAttribute="leading" secondItem="tl5-og-Thh" secondAttribute="leading" id="Ywh-pC-2JP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cAR-zf-Tec" secondAttribute="bottom" id="pr0-Lc-v10"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="M5m-Ph-9Yf" secondAttribute="trailing" id="66S-yX-TLZ"/>
+                                                <constraint firstItem="M5m-Ph-9Yf" firstAttribute="leading" secondItem="78K-OP-S6S" secondAttribute="leadingMargin" id="8E9-cn-5Ru"/>
+                                                <constraint firstItem="tl5-og-Thh" firstAttribute="top" secondItem="78K-OP-S6S" secondAttribute="topMargin" constant="8" id="NF8-jx-MJs"/>
+                                                <constraint firstItem="M5m-Ph-9Yf" firstAttribute="top" secondItem="78K-OP-S6S" secondAttribute="topMargin" id="WlY-Vv-GC9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tl5-og-Thh" secondAttribute="trailing" constant="8" id="Wty-cI-prS"/>
+                                                <constraint firstItem="tl5-og-Thh" firstAttribute="leading" secondItem="78K-OP-S6S" secondAttribute="leadingMargin" constant="8" id="dcU-nw-AgN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="M5m-Ph-9Yf" secondAttribute="bottom" id="iVn-eE-rN7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageCollectionView" destination="M5m-Ph-9Yf" id="Uu2-Wg-0wI"/>
+                                            <outlet property="productTitle" destination="cAR-zf-Tec" id="LSV-xe-XDA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wt7-ez-ODg" firstAttribute="leading" secondItem="cfp-Xp-8BB" secondAttribute="leading" id="684-5R-2e8"/>
+                            <constraint firstItem="cfp-Xp-8BB" firstAttribute="bottom" secondItem="Wt7-ez-ODg" secondAttribute="bottom" id="LR1-NE-2bh"/>
+                            <constraint firstItem="Wt7-ez-ODg" firstAttribute="top" secondItem="o3D-1S-md2" secondAttribute="top" id="SXJ-5t-Yde"/>
+                            <constraint firstAttribute="trailing" secondItem="Wt7-ez-ODg" secondAttribute="trailing" id="rq1-jq-9BK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cfp-Xp-8BB"/>
                     </view>
+                    <connections>
+                        <outlet property="productTableView" destination="Wt7-ez-ODg" id="HXy-9t-LpE"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yoi-6X-1eM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2757.5999999999999" y="-199.25037481259372"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IPhone_5S" width="2500" height="1576"/>
+    </resources>
 </document>

@@ -8,20 +8,67 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell, UICollectionViewDataSource {
 
-    @IBOutlet weak var productImage: UIImageView!
+    //Array to store temp data
+    var array : [lists]? = []
+    
     @IBOutlet weak var productTitle: UILabel!
+    @IBOutlet weak var imageCollectionView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    override func layoutSubviews() {
+        
+        imageCollectionView.dataSource = self
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
+]    }
 
+    //CollectionView
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath as IndexPath) as! CollectionViewCell
+        
+        //cell.productImage.downloadImg(from: (test?[indexPath.row]!.images))      Load single image
+        //let remoteImageUrlString = array?[indexPath.row].images!
+        
+        //print(remoteImageUrlString)
+        return cell
+    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
+        return 2
+    }
+    //CollectionView End
+}
+
+//required App Transport Security Settings
+extension UIImageView{
+    func downloadImg(from url: String){
+        
+        let urlRequest = URLRequest(url: URL(string: url)!)
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data,response,error) in
+            
+            if error != nil{
+                print(error)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.image = UIImage(data: data!)
+            }
+        }
+        task.resume()
+    }
 }

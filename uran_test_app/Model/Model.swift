@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct info : Decodable {
+    let list : [lists]
+}
+
+struct lists : Decodable{
+    let title : String?
+    let images : [String]?
+}
