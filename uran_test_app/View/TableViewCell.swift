@@ -21,6 +21,7 @@ class TableViewCell: UITableViewCell, UICollectionViewDataSource {
     }
     override func layoutSubviews() {
         
+        
         imageCollectionView.dataSource = self
     }
     
@@ -39,8 +40,8 @@ class TableViewCell: UITableViewCell, UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "viewCell", for: indexPath as IndexPath) as! CollectionViewCell
         
+        //This is the way to get single image
         //cell.productImage.downloadImg(from: (arrayImg?[indexPath.row].url)!)
-        //cell.productImage.downloadImg(from: (test?[indexPath.row].imageUrl)!)
         
         return cell
     }
