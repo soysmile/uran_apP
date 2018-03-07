@@ -16,3 +16,4 @@ struct lists : Decodable{
     let title : String?
     let images : [String]?
 }
+

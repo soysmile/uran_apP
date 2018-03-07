@@ -27,7 +27,7 @@ class TableViewCell: UITableViewCell, UICollectionViewDataSource {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-]    }
+    }
 
     //CollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -37,17 +37,16 @@ class TableViewCell: UITableViewCell, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath as IndexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "viewCell", for: indexPath as IndexPath) as! CollectionViewCell
         
-        //cell.productImage.downloadImg(from: (test?[indexPath.row]!.images))      Load single image
-        //let remoteImageUrlString = array?[indexPath.row].images!
+        //cell.productImage.downloadImg(from: (arrayImg?[indexPath.row].url)!)
+        //cell.productImage.downloadImg(from: (test?[indexPath.row].imageUrl)!)
         
-        //print(remoteImageUrlString)
         return cell
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return 2
+        return 1
     }
     //CollectionView End
 }

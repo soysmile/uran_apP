@@ -13,7 +13,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return self.array?.count ?? 0
     }
     
@@ -40,7 +39,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         productTableView.delegate = self
         productTableView.dataSource = self
     }
-
     var array : [lists]? = []
     func jsonParse(){
         let url = "https://gist.githubusercontent.com/u-android/41ade05b6ae1133e7e86e9dfd55f1794/raw/bab1c383b0384d1a4c889b399ad7b13ae05634fa/ios%20challenge%20json"
